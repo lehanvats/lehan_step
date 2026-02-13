@@ -8,6 +8,6 @@ void main() {
     System.out.println("ek aur: ");
     Scanner sc2 = new Scanner(System.in);
     b = sc.nextInt();
-    int c = a + b;
-    System.out.println("ye le output: "+c);
+    int c = a - b;
+    System.out.println("ye le subtraction vaala output: "+c);
 }
