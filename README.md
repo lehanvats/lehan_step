@@ -134,3 +134,67 @@ The objective of the **PalindromeChecker App** is to design and implement a **co
 * **Front and Rear Access** – Enables direct comparison of first and last characters.
 * **Optimized Data Handling** – Eliminates the need for separate reversal data structures.
 * **Data Structure: Deque**
+
+## **UC8: Linked List Based Palindrome Checker**
+
+**Goal:** Check palindrome using singly linked list.
+
+**Flow:**
+
+* Convert string to linked list
+* Reverse second half
+* Compare halves
+
+**Key Concepts used in UC8:**
+
+* **Singly Linked List** – A dynamic data structure where elements are connected using node references.
+* **Node Traversal** – Sequential access to elements using next references.
+* **Fast and Slow Pointer Technique** – Used to find the middle of the linked list efficiently.
+* **In-Place Reversal** – Reverses the second half of the list without extra memory.
+* **Data Structure: Singly Linked List**
+
+## **UC9: Recursive Palindrome Checker**
+
+**Goal:** Check palindrome using recursion.
+
+**Flow:**
+
+* Recursive call compares start & end
+* Base condition exits recursion
+
+**Key Concepts used in UC9:**
+
+* **Recursion** – A technique where a method calls itself to solve smaller subproblems.
+* **Base Condition** – Prevents infinite recursion and terminates the recursive calls.
+* **Call Stack** – Memory structure used to manage method calls during recursion.
+* **Data Structure: Call Stack**
+
+## **UC10: Case-Insensitive & Space-Ignored Palindrome**
+
+**Goal:** Ignore spaces and case while checking a palindrome.
+
+**Flow:**
+
+* Normalize string
+* Apply previous logic
+
+**Key Concepts used in UC10:**
+
+* **String preprocessing**
+* **Regular expressions**
+* **Data Structure: String / Array**
+
+## **UC11: Object-Oriented Palindrome Service**
+
+**Goal:** Encapsulate palindrome logic in a class.
+
+**Flow:**
+
+* Create PalindromeChecker class
+* Expose checkPalindrome() method
+
+**Key Concepts used in UC11 (OOPS):**
+
+* **Encapsulation**
+* **Single Responsibility Principle**
+* **Data Structure: Internal (Stack / Array)**
