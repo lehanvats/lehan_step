@@ -1,3 +1,5 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Stack;
 
 public class PalindromeCheckerApp {
@@ -106,6 +108,33 @@ public class PalindromeCheckerApp {
             char fromQueue = queue.remove();
             char fromStack = stack.pop();
             if (fromQueue != fromStack) {
+                isPalindrome = false;
+                break;
+            }
+        }
+        if (isPalindrome) {
+            System.out.println("The word \"" + input + "\" is a Palindrome.");
+        } else {
+            System.out.println("The word \"" + input + "\" is NOT a Palindrome.");
+        }
+        System.out.println("Program executed successfully.");
+    }
+    static void useCase7(){
+        //Define the input string
+        String input = "refer";
+        //Create a Deque to store characters
+        Deque<Character> deque = new ArrayDeque<>();
+        //Add each character to the deque
+        for (char c : input.toCharArray()){
+            deque.add(c);
+        }
+        //Flag to track palindrome result
+        boolean isPalindrome = true;
+        //Continue comparison while more than one element exists
+        while (deque.size()>1){
+            char first = deque.removeFirst();
+            char last = deque.removeLast();
+            if (first != last) {
                 isPalindrome = false;
                 break;
             }
