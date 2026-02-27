@@ -1,0 +1,92 @@
+import java.util.Stack;
+
+public class PalindromeCheckerApp {
+
+    public static void main(String[] args) {
+        useCase1();
+        useCase2();
+        useCase3();
+        useCase4();
+        useCase5();
+        useCase6();
+    }
+
+    static void useCase1() {
+        System.out.println("=====================================");
+        System.out.println("     Welcome to Palindrome Checker App");
+        System.out.println("=====================================");
+        System.out.println("Application Name : Palindrome Checker App");
+        System.out.println("Version          : 1.0");
+        System.out.println("Description      : Console-based Java application");
+        System.out.println("-------------------------------------");
+        System.out.println("Program started successfully.");
+        System.out.println("Ready to proceed to next use case...");
+    }
+
+    static void useCase2() {
+        String word = "madam";
+        String reversed = "";
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed += word.charAt(i);
+        }
+        if (word.equals(reversed)) {
+            System.out.println("The word \"" + word + "\" is a Palindrome.");
+        } else {
+            System.out.println("The word \"" + word + "\" is NOT a Palindrome.");
+        }
+        System.out.println("Program executed successfully.");
+    }
+
+    static void useCase3() {
+        String original = "level";
+        String reversed = "";
+        for (int i = original.length() - 1; i >= 0; i--) {
+            reversed = reversed + original.charAt(i);
+        }
+        if (original.equals(reversed)) {
+            System.out.println("The string \"" + original + "\" is a Palindrome.");
+        } else {
+            System.out.println("The string \"" + original + "\" is NOT a Palindrome.");
+        }
+        System.out.println("Program executed successfully.");
+    }
+
+    static void useCase4() {
+        String word = "radar";
+        char[] characters = word.toCharArray();
+        boolean isPalindrome = true;
+        for (int i = 0; i < characters.length / 2; i++) {
+            if (characters[i] != characters[characters.length - 1 - i]) {
+                isPalindrome = false;
+                break;
+            }
+        }
+        if (isPalindrome) {
+            System.out.println("The word \"" + word + "\" is a Palindrome.");
+        } else {
+            System.out.println("The word \"" + word + "\" is NOT a Palindrome.");
+        }
+        System.out.println("Program executed successfully.");
+    }
+
+    static void useCase5() {
+        String word = "madam";
+        Stack<Character> stack = new Stack<>();
+        for (int i = 0; i < word.length(); i++) {
+            stack.push(word.charAt(i));
+        }
+        String reversed = "";
+        while (!stack.isEmpty()) {
+            reversed = reversed + stack.pop();
+        }
+        if (word.equals(reversed)) {
+            System.out.println("The word \"" + word + "\" is a Palindrome.");
+        } else {
+            System.out.println("The word \"" + word + "\" is NOT a Palindrome.");
+        }
+        System.out.println("Program executed successfully.");
+    }
+
+    static void useCase6() {
+    }
+}
